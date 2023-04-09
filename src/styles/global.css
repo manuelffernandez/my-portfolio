@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;900&display=swap');
+
+/* ============================================================ */
+/* ========================= ELEMENTS ========================= */
+/* ============================================================ */
+:root {
+  /*============ TYPOGRAPHY ============*/
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /*============ SIZES ============*/
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  --header-height: 3rem;
+
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== Z INDEX ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+
+  /*============ COLORS ============*/
+  --dark: #282828;
+  --gray: #393838;
+  --white: #fff;
+  --blue: #2d979c;
+  --gray-blue: #769FA1;
+
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+      --big-font-size: 3rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0 0 var(--header-height) 0;
+
+  font-size: var(--normal-font-size);
+
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+h1, h2, h3 {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+a:hover {
+  color: var(--gray-blue);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================================== */
+/* ========================= CLASSES ========================= */
+/* =========================================================== */
+
+/*==================== REUSABLE ====================*/
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+.color-dark {
+  color: var(--dark);
+}
+
+.color-gray {
+  color: var(--gray);
+}
+
+.color-white {
+  color: var(--white);
+}
+
+.color-blue {
+  color: var(--blue);
+}
+
+.color-gray-blue {
+  color: var(--gray-blue);
+}
+
+.color-dark:hover {
+  color: var(--dark);
+}
+
+.color-gray:hover {
+  color: var(--gray);
+}
+
+.color-white:hover {
+  color: var(--white);
+}
+
+.color-blue:hover {
+  color: var(--blue);
+}
+
+.color-gray-blue:hover {
+  color: var(--gray-blue);
+}
+
+.bgcolor-dark {
+  background-color: var(--dark);
+}
+
+.bgcolor-gray {
+  background-color: var(--gray);
+}
+
+.bgcolor-white {
+  background-color: var(--white);
+}
+
+.bgcolor-blue {
+  background-color: var(--blue);
+}
+
+.bgcolor-gray-blue {
+  background-color: var(--gray-blue);
+}
+
+.bgcolor-dark:hover {
+  background-color: var(--dark);
+}
+
+.bgcolor-gray:hover {
+  background-color: var(--gray);
+}
+
+.bgcolor-white:hover {
+  background-color: var(--white);
+}
+
+.bgcolor-blue:hover {
+  background-color: var(--blue);
+}
+
+.bgcolor-gray-blue:hover {
+  background-color: var(--gray-blue);
+}
+
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+}
+
+.section__title, 
+.section__subtitle {
+  text-align: center;
+}
+
+/*==================== LAYOUT ====================*/
+.container {
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--gray);
+}
