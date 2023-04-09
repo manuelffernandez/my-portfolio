@@ -77,6 +77,15 @@ body {
   color: var(--white);
 }
 
+header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--gray);
+}
+
 h1, h2, h3 {
   color: var(--blue);
   font-weight: 600;
@@ -247,13 +256,4 @@ img {
 .grid {
   display: grid;
   gap: 1.5rem;
-}
-
-.header {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: var(--z-fixed);
-  background-color: var(--gray);
 }
