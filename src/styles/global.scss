@@ -15,6 +15,27 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /*============ SIZES ============*/
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+}
+
+@media screen and (min-width: $bp-medium) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
 }
 
 html {
@@ -25,9 +46,9 @@ body {
   min-height: 100vh;
   margin: $header-height 0 0 0;
 
-  font-size: $normal-font-size;
+  font-size: var(--normal-font-size);
 
-  background-color: $dark;
+  background-color: $gray;
   color: $white;
 }
 
@@ -46,7 +67,7 @@ header {
   top: 0;
   left: 0;
   z-index: $z-fixed;
-  background-color: $gray;
+  background-color: $dark;
 }
 
 h1, h2, h3 {
@@ -55,23 +76,23 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: $h1-font-size;
+  font-size: var(--h1-font-size);
 }
 
 h2 {
-  font-size: $h2-font-size;
+  font-size: var(--h2-font-size);
 }
 
 h3 {
-  font-size: $h3-font-size;
+  font-size: var(--h3-font-size);
 }
 
 a {
   text-decoration: none;
-  color: $blue;
+  color: $gray-blue;
 }
 a:hover {
-  color: $gray-blue;
+  color: $blue;
 }
 
 ul {
@@ -189,18 +210,26 @@ img {
   background-color: $gray-blue;
 }
 
+.alignText {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
 .section {
   padding: 2rem 0 4rem;
 }
 
 .section__title {
-  font-size: $h1-font-size;
+  font-size: var(--h1-font-size);
   color: $blue;
 }
 
 .section__subtitle {
   display: block;
-  font-size: $small-font-size;
+  font-size: var(--small-font-size);
   margin-bottom: $mb-3;
 }
 
