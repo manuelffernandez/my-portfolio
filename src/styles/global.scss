@@ -24,7 +24,7 @@
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
-  @include medium {
+  @include mediumDown {
     --big-font-size: 3rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
@@ -41,7 +41,7 @@ html {
 
 body {
   min-height: 100vh;
-  margin: $header-height 0 0 0;
+  padding-top: $header-height;
 
   font-size: var(--normal-font-size);
 
@@ -51,20 +51,6 @@ body {
 
 #root {
   width: 100%;
-}
-
-header {
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: $header-height;
-  top: 0;
-  left: 0;
-  z-index: $z-fixed;
-  background-color: $dark;
 }
 
 h1, h2, h3 {
@@ -216,7 +202,7 @@ img {
 }
 
 .section {
-  padding: 2rem 0 4rem;
+  padding-top: $header-height;
   &__title{
     font-size: var(--h1-font-size);
     color: $blue;
