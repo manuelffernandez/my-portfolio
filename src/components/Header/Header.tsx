@@ -34,23 +34,25 @@ const Header = (): JSX.Element => {
   return (
     <header className={`${header}`}>
       <nav className={`container ${nav}`}>
-        <a href='#' className={`fw-100 ${navLogo}`}>
+        <a href={`#${sections[0]}`} className={`fw-100 ${navLogo}`}>
           M
         </a>
         <div className={`${navMenu} ${displayMenu ? navMenuDisplayed : ''}`}>
           <ul className={`grid ${navList}`}>
-            {sections.map(section => (
-              <li key={section}>
-                <a
-                  onClick={() => {
-                    setDisplayMenu(false);
-                  }}
-                  href={`#${section}`}
-                  className={navLink}>
-                  {section}
-                </a>
-              </li>
-            ))}
+            {sections
+              .filter(section => section !== sections[0])
+              .map(section => (
+                <li key={section}>
+                  <a
+                    onClick={() => {
+                      setDisplayMenu(false);
+                    }}
+                    href={`#${section}`}
+                    className={navLink}>
+                    {section}
+                  </a>
+                </li>
+              ))}
           </ul>
           <i
             onClick={() => {
