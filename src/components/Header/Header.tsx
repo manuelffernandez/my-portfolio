@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './Header.module.scss';
-import { sections } from '../helpers/sections';
+import { sections } from '../../helpers/sections';
 
 const Header = (): JSX.Element => {
   const bpMedium: number = 968;
