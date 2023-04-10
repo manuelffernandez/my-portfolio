@@ -1,0 +1,79 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: $z-fixed;
+  background-color: $dark;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.navLogo {
+  font-size: var(--h1-font-size);
+  &:hover {
+    color: $gray-blue;
+  }
+}
+
+.navMenu {
+  @include mediumDown {
+    position: fixed;
+    top: -150px;
+    right: 0;
+    width: 100%;
+    background-color: $dark;
+    padding: 4rem 2rem 1.5rem 2rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    transition: .5s;
+    &Displayed {
+      top: 0;
+    }
+  }
+}
+
+.navList {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.navLink {
+  font-size: var(--small-font-size);
+  font-weight: 400;
+}
+
+.navClose {
+  display: none;
+  @include mediumDown {
+    display: inline;
+    position: absolute;
+    right: 1.3rem;
+    top: .8rem;
+    font-size: var(--h2-font-size);
+    color: $gray-blue;
+    cursor: pointer;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.navButtonMenu {
+  display: none;
+  @include mediumDown {
+    display: inline;
+    font-size: var(--h2-font-size);
+    color: $gray-blue;
+    cursor: pointer;
+  }
+}
