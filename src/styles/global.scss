@@ -24,10 +24,7 @@
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
-}
-
-@media screen and (min-width: $bp-medium) {
-  :root {
+  @include medium {
     --big-font-size: 3rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
@@ -90,9 +87,9 @@ h3 {
 a {
   text-decoration: none;
   color: $gray-blue;
-}
-a:hover {
-  color: $blue;
+  &:hover {
+    color: $blue;
+  }
 }
 
 ul {
@@ -150,63 +147,63 @@ img {
   color: $gray-blue;
 }
 
-.color-dark:hover {
+.color-dark-hover {
   color: $dark;
 }
 
-.color-gray:hover {
+.color-gray-hover {
   color: $gray;
 }
 
-.color-white:hover {
+.color-white-hover {
   color: $white;
 }
 
-.color-blue:hover {
+.color-blue-hover {
   color: $blue;
 }
 
-.color-gray-blue:hover {
+.color-gray-blue-hover {
   color: $gray-blue;
 }
 
-.bgcolor-dark {
+.bgc-dark {
   background-color: $dark;
 }
 
-.bgcolor-gray {
+.bgc-gray {
   background-color: $gray;
 }
 
-.bgcolor-white {
+.bgc-white {
   background-color: $white;
 }
 
-.bgcolor-blue {
+.bgc-blue {
   background-color: $blue;
 }
 
-.bgcolor-gray-blue {
+.bgc-gray-blue {
   background-color: $gray-blue;
 }
 
-.bgcolor-dark:hover {
+.bgc-dark-hover {
   background-color: $dark;
 }
 
-.bgcolor-gray:hover {
+.bgc-gray-hover {
   background-color: $gray;
 }
 
-.bgcolor-white:hover {
+.bgc-white-hover {
   background-color: $white;
 }
 
-.bgcolor-blue:hover {
+.bgc-blue-hover {
   background-color: $blue;
 }
 
-.bgcolor-gray-blue:hover {
+.bgc-gray-blue-hover {
   background-color: $gray-blue;
 }
 
@@ -220,22 +217,17 @@ img {
 
 .section {
   padding: 2rem 0 4rem;
-}
-
-.section__title {
-  font-size: var(--h1-font-size);
-  color: $blue;
-}
-
-.section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: $mb-3;
-}
-
-.section__title, 
-.section__subtitle {
-  text-align: center;
+  &__title{
+    font-size: var(--h1-font-size);
+    color: $blue;
+    text-align: center;
+  };
+  &__subtitle{
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: $mb-3;
+    text-align: center;
+  };
 }
 
 /*==================== LAYOUT ====================*/
