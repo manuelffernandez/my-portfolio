@@ -1,0 +1,11 @@
+.contactGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  @include mediumDown {
+    grid-template-columns: 1fr;
+  }
+}

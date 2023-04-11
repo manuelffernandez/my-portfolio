@@ -1,13 +1,19 @@
 .section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: $header-height;
+  width: 100%;
   &Title{
-    font-size: var(--big-font-size);
+    font-size: var(--h1-font-size);
     color: $cyan;
     text-align: center;
   };
   &Subtitle{
     display: block;
+    color: $white;
     font-size: var(--small-font-size);
+    font-weight: 300;
     margin-bottom: $mb-3;
     text-align: center;
   };

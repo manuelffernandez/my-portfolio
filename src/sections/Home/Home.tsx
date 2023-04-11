@@ -13,6 +13,7 @@ const Home = (): JSX.Element => {
     homeImgCont,
     homeImgContImage,
     cvStyle,
+    cvStyleCV,
   } = styles;
 
   return (
@@ -29,7 +30,9 @@ const Home = (): JSX.Element => {
         </div>
         <div>
           <button className={homeDescButton}>
-            Download <span className={cvStyle}>CV</span>
+            <span className={cvStyle}>
+              Download <span className={cvStyleCV}>CV</span>
+            </span>
           </button>
         </div>
       </div>
