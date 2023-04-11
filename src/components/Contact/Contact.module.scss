@@ -1,0 +1,30 @@
+.contactCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  padding: $mb-2;
+  background-color: $dark;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+  color: $blue;
+  font-size: 3rem;
+  &:hover {
+    transform: scale(1.02);
+    color: $blue;
+  }
+  @include mediumDown {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+.contactTitle {
+  color: $white;
+  font-size: var(--h3-font-size);
+  @include mediumDown {
+    font-size: var(--h2-font-size);
+  }
+}
