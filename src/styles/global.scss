@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;900&display=swap');
 
 /* ============================================================ */
 /* ========================= ELEMENTS ========================= */
@@ -54,7 +54,7 @@ body {
 }
 
 h1, h2, h3 {
-  color: $blue;
+  color: $cyan;
   font-weight: 600;
 }
 
@@ -72,9 +72,9 @@ h3 {
 
 a {
   text-decoration: none;
-  color: $gray-blue;
+  color: $blue;
   &:hover {
-    color: $blue;
+    color: $cyan;
   }
 }
 
@@ -95,6 +95,10 @@ img {
 /*==================== REUSABLE ====================*/
 .fw-100 {
   font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
 }
 
 .fw-300 {
@@ -125,12 +129,12 @@ img {
   color: $white;
 }
 
-.color-blue {
-  color: $blue;
+.color-cyan {
+  color: $cyan;
 }
 
-.color-gray-blue {
-  color: $gray-blue;
+.color-blue {
+  color: $blue;
 }
 
 .color-dark-hover {
@@ -145,12 +149,12 @@ img {
   color: $white;
 }
 
-.color-blue-hover {
-  color: $blue;
+.color-cyan-hover {
+  color: $cyan;
 }
 
-.color-gray-blue-hover {
-  color: $gray-blue;
+.color-blue-hover {
+  color: $blue;
 }
 
 .bgc-dark {
@@ -165,12 +169,12 @@ img {
   background-color: $white;
 }
 
-.bgc-blue {
-  background-color: $blue;
+.bgc-cyan {
+  background-color: $cyan;
 }
 
-.bgc-gray-blue {
-  background-color: $gray-blue;
+.bgc-blue {
+  background-color: $blue;
 }
 
 .bgc-dark-hover {
@@ -185,12 +189,12 @@ img {
   background-color: $white;
 }
 
-.bgc-blue-hover {
-  background-color: $blue;
+.bgc-cyan-hover {
+  background-color: $cyan;
 }
 
-.bgc-gray-blue-hover {
-  background-color: $gray-blue;
+.bgc-blue-hover {
+  background-color: $blue;
 }
 
 .centerEverithing {
