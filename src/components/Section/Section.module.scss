@@ -1,0 +1,14 @@
+.section {
+  padding-top: $header-height;
+  &Title{
+    font-size: var(--big-font-size);
+    color: $cyan;
+    text-align: center;
+  };
+  &Subtitle{
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: $mb-3;
+    text-align: center;
+  };
+}
