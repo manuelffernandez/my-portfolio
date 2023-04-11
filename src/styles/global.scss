@@ -26,7 +26,7 @@
   --smaller-font-size: .813rem;
   @include mediumDown {
     --big-font-size: 2rem;
-    --h1-font-size: 1.5rem;
+    --h1-font-size: 1.75rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1.125rem;
     --normal-font-size: .938rem;
@@ -60,6 +60,8 @@ h1, h2, h3 {
 
 h1 {
   font-size: var(--h1-font-size);
+  letter-spacing: 0.3rem;
+  word-spacing: 0.5rem;
 }
 
 h2 {
@@ -68,6 +70,8 @@ h2 {
 
 h3 {
   font-size: var(--h3-font-size);
+  letter-spacing: 0.2rem;
+  word-spacing: 0.4;
 }
 
 a {
@@ -197,19 +201,13 @@ img {
   background-color: $blue;
 }
 
-.centerEverithing {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-
 /*==================== LAYOUT ====================*/
 .container {
   max-width: 1200px;
-  margin-left: $mb-1-5;
-  margin-right: $mb-1-5;
+  margin-left: $mb-1;
+  margin-right: $mb-1;
+  padding-left: $mb-2-5;
+  padding-right: $mb-2-5;
 }
 
 .grid {
