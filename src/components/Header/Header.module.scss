@@ -22,7 +22,7 @@
 .navLogo {
   font-size: var(--h1-font-size);
   &:hover {
-    color: $gray-blue;
+    color: $blue;
   }
 }
 
@@ -60,10 +60,10 @@
     right: 1.3rem;
     top: .8rem;
     font-size: var(--h2-font-size);
-    color: $gray-blue;
+    color: $blue;
     cursor: pointer;
     &:hover {
-      color: $blue;
+      color: $cyan;
     }
   }
 }
@@ -73,7 +73,7 @@
   @include mediumDown {
     display: inline;
     font-size: var(--h2-font-size);
-    color: $gray-blue;
+    color: $blue;
     cursor: pointer;
   }
 }
