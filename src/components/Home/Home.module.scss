@@ -1,0 +1,66 @@
+.homeCont {
+  display: flex;
+  margin-top: $mb-5;
+  width: 1000px;
+  max-height: 348px;
+  @include mediumDown {
+    flex-direction: column-reverse;
+    max-height: 100%;
+    gap: $mb-1-5;
+  }
+}
+
+.homeDesc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  &Title {
+    font-size: var(--big-font-size);
+  };
+  &Subtitle{
+    margin-bottom: $mb-2;
+    color: $blue;
+  };
+  &Text {
+    font-size: var(--h3-font-size);
+    margin-bottom: $mb-2;
+  };
+  &Button {
+    border: 0;
+    border-radius: 0.2rem;
+    padding: 1rem;
+    font-size: var(--h3-font-size);
+    color: $white;
+    background-color: $blue;
+    opacity: 0.8;
+    cursor: pointer;
+    &:hover{
+      opacity: 1;
+    }
+  };
+  @include mediumDown {
+    text-align: center;
+  }
+}
+
+.homeImgCont {
+  flex: 1;
+  max-height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  &Image {
+    max-height: 100%;
+    width: auto;
+    border-radius: 50%;
+  };
+  @include mediumDown {
+    justify-content: center;
+  }
+}
+
+.cvStyle {
+  letter-spacing: 0.1rem;
+}
