@@ -1,9 +1,10 @@
-import { Header } from './components';
+import { Header, Main } from './components';
 
 export default function App(): JSX.Element {
   return (
     <>
       <Header />
+      <Main />
     </>
   );
 }
