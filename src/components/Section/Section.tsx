@@ -11,7 +11,7 @@ const Section = (props: Props): JSX.Element => {
   const { sectionName, children, title, subtitle } = props;
   const { section, sectionTitle, sectionSubtitle } = styles;
   return (
-    <section id={sectionName} className={section}>
+    <section id={sectionName} className={`container ${section}`}>
       <h3 className={sectionTitle}>{title}</h3>
       <h4 className={sectionSubtitle}>{subtitle}</h4>
       {children}

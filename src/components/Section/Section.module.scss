@@ -1,4 +1,7 @@
 .section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: $header-height;
   width: 100%;
   &Title{
@@ -8,7 +11,7 @@
   };
   &Subtitle{
     display: block;
-    color: $blue;
+    color: $white;
     font-size: var(--small-font-size);
     font-weight: 300;
     margin-bottom: $mb-3;
