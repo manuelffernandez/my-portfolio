@@ -1,4 +1,4 @@
-import { Home } from '../../sections';
+import { Home, Findme } from '../../sections';
 import styles from './Main.module.scss';
 
 const Main = (): JSX.Element => {
@@ -7,6 +7,7 @@ const Main = (): JSX.Element => {
   return (
     <main className={mainCont}>
       <Home />
+      <Findme />
     </main>
   );
 };
