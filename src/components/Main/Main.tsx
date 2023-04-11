@@ -1,4 +1,4 @@
-import { Home } from '../';
+import { Home } from '../../sections';
 import styles from './Main.module.scss';
 
 const Main = (): JSX.Element => {
