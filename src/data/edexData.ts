@@ -1,5 +1,5 @@
 interface Experience {
-  name: string;
+  title: string;
   place: string;
   description?: string;
   startDate: Date;
@@ -13,7 +13,7 @@ export const edexData: {
   en: {
     studies: [
       {
-        name: 'Bachelor of Mathematics',
+        title: 'Bachelor of Mathematics',
         place: 'Universidad del Comahue',
         description:
           'I did not end the university degree, but I adquired a lot of math knowledges.',
@@ -21,14 +21,14 @@ export const edexData: {
         finishDate: new Date(2020, 10, 30),
       },
       {
-        name: 'Web development',
+        title: 'Web development',
         place: 'Self-taught',
         description:
           'I read tons of documentation and also saw Youtube channels like: FreeCodeCamp, Traversy Media, The Net Ninja, The Coding Train, Midudev.',
         startDate: new Date(2021, 2, 15),
       },
       {
-        name: 'React',
+        title: 'React',
         place: 'Coderhouse',
         description:
           'I began studying more formally through an online institute.',
@@ -36,7 +36,7 @@ export const edexData: {
         finishDate: new Date(2022, 11, 21),
       },
       {
-        name: 'PostgreSQL',
+        title: 'PostgreSQL',
         place: 'EDTeam',
         description: 'I recently became interested in databases.',
         startDate: new Date(2022, 3, 5),
@@ -44,19 +44,19 @@ export const edexData: {
     ],
     jobs: [
       {
-        name: 'Customers service',
+        title: 'Customers service',
         place: 'Merchandising Teleférico Cerro Otto',
         startDate: new Date(2016, 0, 1),
         finishDate: new Date(2017, 11, 20),
       },
       {
-        name: 'Bakery entrepreneurship',
+        title: 'Bakery entrepreneurship',
         place: 'my own place',
         startDate: new Date(2016, 0, 1),
         finishDate: new Date(2017, 11, 20),
       },
       {
-        name: 'Cashier',
+        title: 'Cashier',
         place: 'Teleférico Cerro Otto',
         description: 'I gained a lot of team working experience.',
         startDate: new Date(2022, 0, 3),
@@ -67,7 +67,7 @@ export const edexData: {
   es: {
     studies: [
       {
-        name: 'Licenciatura en Matemáticas',
+        title: 'Licenciatura en Matemáticas',
         place: 'Universidad del Comahue',
         description:
           'No terminé la carrera, pero adquirí un montón de conociemiento matemáticos.',
@@ -75,14 +75,14 @@ export const edexData: {
         finishDate: new Date(2020, 10, 30),
       },
       {
-        name: 'Web development',
+        title: 'Web development',
         place: 'Self-taught',
         description:
           'Leí documentación y ví canales de Youtube como: FreeCodeCamp, Traversy Media, The Net Ninja, The Coding Train, Midudev.',
         startDate: new Date(2021, 2, 15),
       },
       {
-        name: 'React',
+        title: 'React',
         place: 'Coderhouse',
         description:
           'Comencé a estudiar formalmente a través de un instituo online.',
@@ -90,7 +90,7 @@ export const edexData: {
         finishDate: new Date(2022, 11, 21),
       },
       {
-        name: 'PostgreSQL',
+        title: 'PostgreSQL',
         place: 'EDTeam',
         description: 'Recientemente me he interesado por las bases de datos.',
         startDate: new Date(2022, 3, 5),
@@ -98,19 +98,19 @@ export const edexData: {
     ],
     jobs: [
       {
-        name: 'Atención al cliente',
+        title: 'Atención al cliente',
         place: 'Merchandising Teleférico Cerro Otto',
         startDate: new Date(2016, 0, 1),
         finishDate: new Date(2017, 11, 20),
       },
       {
-        name: 'Emprendimiento panadero',
+        title: 'Emprendimiento panadero',
         place: 'Mi propio lugar',
         startDate: new Date(2016, 0, 1),
         finishDate: new Date(2017, 11, 20),
       },
       {
-        name: 'Cajero',
+        title: 'Cajero',
         place: 'Teleférico Cerro Otto',
         description: 'Gané un monton de experiencia de trabajo en equipo.',
         startDate: new Date(2022, 0, 3),
