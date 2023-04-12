@@ -1,6 +1,5 @@
-import { sections } from '../../helpers/sections';
+import manuPortrait from '../../assets/img/me.jpg';
 import styles from './Home.module.scss';
-import myImage from '../../assets/img/me.jpg';
 
 const Home = (): JSX.Element => {
   const {
@@ -17,7 +16,7 @@ const Home = (): JSX.Element => {
   } = styles;
 
   return (
-    <section id={sections[0]} className={`container ${homeCont}`}>
+    <section className={`container ${homeCont}`}>
       <div className={homeDesc}>
         <div>
           <h1 className={homeDescTitle}>Manuel Fernandez</h1>
@@ -38,7 +37,7 @@ const Home = (): JSX.Element => {
       </div>
       <div className={homeImgCont}>
         <img
-          src={myImage}
+          src={manuPortrait}
           alt='Self-portrait of Manuel'
           className={homeImgContImage}
         />

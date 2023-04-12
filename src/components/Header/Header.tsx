@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './Header.module.scss';
-import { sections } from '../../helpers/sections';
+import sections from '../../sections';
 
 const Header = (): JSX.Element => {
   const bpMedium: number = 968;
@@ -39,20 +39,18 @@ const Header = (): JSX.Element => {
         </a>
         <div className={`${navMenu} ${displayMenu ? navMenuDisplayed : ''}`}>
           <ul className={`grid ${navList}`}>
-            {sections
-              .filter(section => section !== sections[0])
-              .map(section => (
-                <li key={section}>
-                  <a
-                    onClick={() => {
-                      setDisplayMenu(false);
-                    }}
-                    href={`#${section}`}
-                    className={navLink}>
-                    {section}
-                  </a>
-                </li>
-              ))}
+            {sections.map((section, index) => (
+              <li key={index}>
+                <a
+                  onClick={() => {
+                    setDisplayMenu(false);
+                  }}
+                  href={`#${section.id}`}
+                  className={navLink}>
+                  {section.title}
+                </a>
+              </li>
+            ))}
           </ul>
           <i
             onClick={() => {
