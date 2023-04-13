@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin smallDown {
+  @media screen and (max-width: $bp-small) {
+    @content;
+  }
+}

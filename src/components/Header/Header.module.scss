@@ -27,6 +27,7 @@
 }
 
 .navMenu {
+  width: 50%;
   @include mediumDown {
     position: fixed;
     top: -150px;
@@ -43,8 +44,9 @@
 }
 
 .navList {
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .navLink {

@@ -38,7 +38,7 @@ const Header = (): JSX.Element => {
           M
         </a>
         <div className={`${navMenu} ${displayMenu ? navMenuDisplayed : ''}`}>
-          <ul className={`grid ${navList}`}>
+          <ul className={navList}>
             {sections.map((section, index) => (
               <li key={index}>
                 <a
