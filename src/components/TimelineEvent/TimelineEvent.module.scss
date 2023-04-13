@@ -1,0 +1,54 @@
+.item {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  margin-bottom: $mb-1;
+  padding-right: $mb-1-5;
+  text-align: right;
+  &:nth-child(odd) {
+    align-self: flex-end;
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: $mb-1-5;
+    text-align: left;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 70%;
+  &Title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    word-break: normal;
+    color: $blue;
+  };
+  &Date {
+    font-weight: 200;
+    font-size: var(--small-font-size);
+    opacity: 0.85;
+  };
+  &Place {
+    margin-bottom: $mb-0-75;
+    font-size: 1.1rem;
+  };
+  &Desc {
+    font-size: var(--small-font-size);
+    font-weight: 300;
+    word-spacing: .1rem;
+  };
+  @include mediumDown {
+    max-width: 100%;
+    &Title {
+      font-size: 1rem;
+    };
+    &Desc {
+      font-size: var(--smaller-font-size);
+    };
+  }
+}

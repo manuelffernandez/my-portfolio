@@ -26,7 +26,6 @@
     "vite": "^4.2.0"
   },
   "dependencies": {
-    "@fontsource/poppins": "^4.5.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
