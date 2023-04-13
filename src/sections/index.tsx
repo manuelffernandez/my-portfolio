@@ -1,5 +1,6 @@
 import { Findme } from './Findme';
 import { Edex } from './Edex';
+import { Skills } from './Skills';
 
 interface Section {
   id: string;
@@ -21,8 +22,12 @@ const sections: Section[] = [
     subtitle: 'Education and Work Experience',
     element: <Edex />,
   },
-  // { sectionId: 'Ed/Ex', element: '' },
-  // { sectionId: 'Skills', element: '' },
+  {
+    id: 'skills',
+    title: 'Skills',
+    subtitle: 'My tech level',
+    element: <Skills />,
+  },
   // { sectionId: 'Projects', element: '' },
 ];
 
