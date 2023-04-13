@@ -3,21 +3,20 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-bottom: 500px;
 }
 
 .edexTab {
   width: 50%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: $mb-1;
+  margin-bottom: $mb-2;
   &Button {
     letter-spacing: .3rem;
     border: 0;
     background-color: transparent;
     color: $white;
     font-family: 'Poppins';
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     cursor: pointer;
     &:hover {
       color: $blue;
@@ -35,4 +34,8 @@
       font-size: 1.4rem;
     }
   }
+}
+
+.edexSegments {
+  width: 100%;
 }

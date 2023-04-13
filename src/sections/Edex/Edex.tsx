@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import styles from './Edex.module.scss';
+import { Timeline } from '../../components';
+import { edexData } from '../../data/edexData';
 
 const Edex = (): JSX.Element => {
   const [showEducactionSegment, setShowEducactionSegment] =
@@ -11,8 +13,8 @@ const Edex = (): JSX.Element => {
     edexTabButton,
     edexTabButtonActive,
     edexSegments,
-    edexSegment,
   } = styles;
+
   return (
     <div className={edexCont}>
       <div className={edexTab}>
@@ -37,9 +39,9 @@ const Edex = (): JSX.Element => {
       </div>
       <div className={edexSegments}>
         {showEducactionSegment ? (
-          <div className={edexSegment}>Ed Segment</div>
+          <Timeline events={edexData.en.studies} />
         ) : (
-          <div className={edexSegment}>Ed Section</div>
+          <Timeline events={edexData.en.jobs} />
         )}
       </div>
     </div>
