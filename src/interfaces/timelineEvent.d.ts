@@ -3,6 +3,4 @@ export interface TimelineEventType {
   place: string;
   description?: string;
   date: string;
-  // startDate: Date;
-  // finishDate?: Date;
 }
