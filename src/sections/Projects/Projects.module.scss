@@ -1,0 +1,95 @@
+.swiper {
+  width: 100%;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  align-items: stretch;
+  gap: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  height: 20rem;
+  @include mediumDown {
+    flex-direction: column;
+    height: 40rem;
+  }
+}
+
+.slideImgSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &Image {
+    height: 100%;
+    border-radius: 5px;
+  }
+  @include mediumDown {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.slideInfoSection {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  &Title {
+    font-size: var(--h2-font-size);
+    font-weight: 600;
+    color: $blue;
+  }
+  &Buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  &Desc {
+    font-weight: 300;
+    line-height: 1.7rem;
+  }
+  @include mediumDown {
+    text-align: center;
+  }
+}
+
+.btn {
+  flex: 1;
+  padding: .5rem;
+  border-radius: 5px;
+  font-size: var(--h3-font-size);
+  font-weight: 400;
+  text-align: center;
+  opacity: 0.9;
+  &Demo {
+    @extend .btn;
+    background-color: $blue;
+    color: $white;
+    &:hover {
+      color: $white;
+      opacity: 1;
+    }
+    &Disabled {
+      @extend .btnDemo;
+      cursor: default;
+      opacity: 0.4;
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+  }
+  &Repo {
+    @extend .btn;
+    background-color: $white;
+    color: black;
+    &:hover {
+      color: black;
+      opacity: 1;
+    }
+  }
+}
