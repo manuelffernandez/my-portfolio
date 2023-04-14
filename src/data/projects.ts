@@ -1,6 +1,7 @@
 import blogImg from '../assets/img/Blogs-screenshot.jpg';
 import giffyImg from '../assets/img/giphy-screenshot.jpg';
 import jompaImg from '../assets/img/Jompa-screenshot.jpg';
+import coffeeImg from '../assets/img/coffeeshop-screenshot.jpg';
 import lhotseImg from '../assets/img/lhotse-screenshot.jpg';
 
 interface Project {
@@ -21,10 +22,10 @@ export const projects: Project[] = [
     deployLink: 'https://giffy-app-sable.vercel.app/',
   },
   {
-    title: 'CoffeShop',
+    title: 'CoffeeShop',
     description:
       'Shopping cart simulator made with Vanilla JS. Its primary objective is to implement the fundamentals of the language. Also integrates the asynchronous logic of the global fetch() method. mockapi.io platform was employed as the database.',
-    imgUrl: '',
+    imgUrl: coffeeImg,
     repoLink: 'https://github.com/manuelffernandez/coffe-shopping-cart',
     deployLink: 'https://manuelffernandez.github.io/coffe-shopping-cart/',
   },
