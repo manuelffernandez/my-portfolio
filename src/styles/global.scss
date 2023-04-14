@@ -201,6 +201,23 @@ img {
   background-color: $blue;
 }
 
+/*==================== OVERRIDE SWIPER ====================*/
+.swiper-button-prev, .swiper-button-next {
+  color: $blue;
+  &::after {
+    font-size: var(--h1-font-size);
+  }
+}
+
+.swiper-pagination-bullet {
+  background: $dark;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: $cyan;
+}
+
 /*==================== LAYOUT ====================*/
 .container {
   max-width: 1200px;
