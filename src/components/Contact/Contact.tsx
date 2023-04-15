@@ -14,7 +14,7 @@ const Contact = (props: Props): JSX.Element => {
       href={data.link}
       target='_blank'
       className={contactCont}
-      rel='noreferrer'>
+      rel='noopener noreferrer'>
       <div className={contactIcon}>{data.icon}</div>
       <p className={contactTitle}>{data.title}</p>
     </a>
