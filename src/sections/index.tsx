@@ -39,7 +39,7 @@ const sections: Section[] = [
   {
     id: 'objectives',
     title: 'Objectives',
-    subtitle: `What I'm currently learning`,
+    subtitle: `Techs I will learn`,
     element: <Objectives />,
   },
 ];
