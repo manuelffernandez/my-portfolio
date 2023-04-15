@@ -15,6 +15,15 @@
   &:last-child {
     margin-bottom: 0;
   }
+  @include smallDown {
+    justify-content: flex-start;
+    text-align: left;
+    padding-right: 0;
+    padding-left: $mb-1-5;
+    &:nth-child(odd) {
+      align-self: flex-start;
+    }
+  }
 }
 
 .content {
