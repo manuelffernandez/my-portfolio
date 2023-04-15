@@ -46,7 +46,7 @@ export const projects: Project[] = [
   {
     title: 'Lhotse ski',
     description:
-      'My first major project. It was built using HTML and Bootstrap as the frontend toolkit. To customize the default styles, I used the SCSS preprocessor, which achieves a consistent appearance with the fictitious brand.',
+      'My first major project. It was built using HTML and Bootstrap as the front-End toolkit. To customize the default styles, I used the SCSS preprocessor, which achieves a consistent appearance with the fictitious brand.',
     imgUrl: lhotseImg,
     repoLink: 'https://github.com/manuelffernandez/static-website-coderhouse',
     deployLink: 'https://cerro-lhotse.netlify.app/index.html',
