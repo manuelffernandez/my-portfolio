@@ -32,7 +32,7 @@ const Header = (): JSX.Element => {
   }, [displayMenu]);
 
   return (
-    <header className={`${header}`}>
+    <header className={header}>
       <nav className={`container ${nav}`}>
         <a href='#' className={`fw-100 ${navLogo}`}>
           M
