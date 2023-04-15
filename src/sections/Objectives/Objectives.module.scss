@@ -1,0 +1,46 @@
+.objCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: start;
+  gap: 2rem;
+  width: 70%;
+  @include mediumDown {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.iconCont {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  &Img {
+    background-color: $dark;
+    border: 1px solid $blue;
+    border-radius: 5px;
+    width: 8rem;
+    height: 8rem;
+    &Disabled {
+      @extend .iconContImg;
+      opacity: 0.4;
+    }
+    @include mediumDown {
+      width: 6.5rem;
+      height: 6.5rem;
+    }
+  }
+  &Title {
+    font-size: var(--h3-font-size);
+    font-weight: 400;
+  }
+  @include mediumDown {
+    width: 16.5rem;
+    text-align: left;
+    flex-direction: row;
+    align-items: start;
+  }
+}
