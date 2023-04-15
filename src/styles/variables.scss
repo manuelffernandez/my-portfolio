@@ -1,5 +1,6 @@
 /*============ BREAKPOINTS ============*/
 $bp-medium: 968px;
+$bp-small: 484px;
 
 /*============ MARGINS ============*/
 $header-height: 3rem;
@@ -12,6 +13,8 @@ $mb-1-5: 1.5rem;
 $mb-2: 2rem;
 $mb-2-5: 2.5rem;
 $mb-3: 3rem;
+$mb-4: 4rem;
+$mb-5: 5rem;
 
 /*========== Z INDEX ==========*/
 $z-tooltip: 10;
@@ -22,5 +25,5 @@ $z-modal: 1000;
 $dark: #1d1d1d;
 $gray: #302f2f;
 $white: #fff;
-$blue: #2d979c;
-$gray-blue: #769FA1;
+$cyan: #19E0EA;
+$blue: #0f7a8d;

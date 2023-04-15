@@ -1,0 +1,74 @@
+.homeCont {
+  display: flex;
+  margin-top: $mb-5;
+  min-width: $bp-medium;
+  max-height: 350px;
+  @include mediumDown {
+    min-width: 100%;
+    width: 100%;
+    flex-direction: column-reverse;
+    max-height: 100%;
+    gap: $mb-1-5;
+  }
+}
+
+.homeDesc {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+  &Title {
+    font-size: var(--big-font-size);
+  };
+  &Subtitle{
+    margin-bottom: $mb-2;
+    color: $blue;
+  };
+  &Text {
+    font-size: var(--h3-font-size);
+    margin-bottom: $mb-2;
+  };
+  &Button {
+    display: inline-block;
+    border: 0;
+    border-radius: 0.2rem;
+    padding: 1rem;
+    font-size: var(--h3-font-size);
+    color: $white;
+    background-color: $blue;
+    opacity: 0.8;
+    cursor: pointer;
+    &:hover{
+      opacity: 1;
+    }
+  };
+  @include mediumDown {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+.homeImgCont {
+  flex: 1;
+  max-height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  &Image {
+    max-height: 100%;
+    width: auto;
+    border-radius: 50%;
+  };
+  @include mediumDown {
+    justify-content: center;
+  }
+}
+
+.cvStyle {
+  opacity: 1;
+  &CV {
+    letter-spacing: 0.1rem;
+  }
+}

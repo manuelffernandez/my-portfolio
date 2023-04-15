@@ -1,0 +1,48 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: $mb-4;
+  padding-left: $mb-1;
+  padding-right: $mb-1;
+  background-color: $dark;
+  @include mediumDown {
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: $mb-1;
+    padding-bottom: $mb-1;
+  }
+}
+
+.name {
+  text-align: left;
+  font-size: var(--h3-font-size);
+  font-weight: 400;
+  @include mediumDown {
+    text-align: center;
+  }
+}
+
+.subname {
+  text-align: left;
+  font-size: var(--normal-font-size);
+  font-weight: 200;
+  @include mediumDown {
+    text-align: center;
+  }
+}
+
+.contactme {
+  font-size: var(--h3-font-size);
+  &:hover {
+    color: $blue;
+    text-decoration: underline;
+  }
+}
+
+.portfolioRepo {
+  font-size: var(--h1-font-size);
+}

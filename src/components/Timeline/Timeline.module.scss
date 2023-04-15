@@ -1,0 +1,13 @@
+.timelineCont {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &::after {
+    position: absolute;
+    left: calc(50% - 2px);
+    content: '';
+    width: 4px;
+    height: 100%;
+    background-color: $blue;
+  }
+}

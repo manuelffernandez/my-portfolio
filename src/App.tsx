@@ -1,3 +1,11 @@
+import { Header, Main, Footer } from './components';
+
 export default function App(): JSX.Element {
-  return <div>Hola mundo</div>;
+  return (
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
+  );
 }
