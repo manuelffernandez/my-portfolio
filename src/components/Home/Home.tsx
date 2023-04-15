@@ -25,7 +25,7 @@ const Home = (): JSX.Element => {
           <p className={`fw-200 ${homeDescText}`}>
             Im currently seeking my first job in IT. Over the past year I have
             been dedicated to mastering web development with React as my primary
-            technology.
+            library.
           </p>
         </div>
         <div>
