@@ -7,7 +7,7 @@ const Footer = (): JSX.Element => {
     <footer className={footer}>
       <div>
         <p className={name}>Manuel Fernandez</p>
-        <p className={subname}>Frontend developer</p>
+        <p className={subname}>Front-End developer</p>
       </div>
       <a href='#findme' className={contactme}>
         Contact me

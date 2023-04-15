@@ -21,11 +21,11 @@ const Home = (): JSX.Element => {
       <div className={homeDesc}>
         <div>
           <h1 className={homeDescTitle}>Manuel Fernandez</h1>
-          <h2 className={homeDescSubtitle}>Frontend developer</h2>
+          <h2 className={homeDescSubtitle}>Front-End developer</h2>
           <p className={`fw-200 ${homeDescText}`}>
             Im currently seeking my first job in IT. Over the past year I have
             been dedicated to mastering web development with React as my primary
-            technology.
+            library.
           </p>
         </div>
         <div>
