@@ -8,7 +8,11 @@ const Skills = (): JSX.Element => {
     <div className={skillsGrid}>
       {icons.map((icon, index) => (
         <div key={index} className={iconCont}>
-          <img className={iconContImg} src={icon.icon} alt={icon.title} />
+          <img
+            className={iconContImg}
+            src={icon.icon}
+            alt={icon.title.concat(' icon')}
+          />
         </div>
       ))}
     </div>

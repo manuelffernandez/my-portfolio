@@ -13,17 +13,61 @@ import reactIcon from '../assets/icons/react.svg';
 import reduxIcon from '../assets/icons/redux.svg';
 
 export const icons = [
-  { title: 'html icon', icon: htmlIcon },
-  { title: 'css 3 icon', icon: cssIcon },
-  { title: 'sass icon', icon: sassIcon },
-  { title: 'javascript icon', icon: jsIcon },
-  { title: 'typescript icon', icon: tsIcon },
-  { title: 'git icon', icon: gitIcon },
-  { title: 'bootstrap icon', icon: bsIcon },
-  { title: 'mui icon', icon: muiIcon },
-  { title: 'eslint icon', icon: eslintIcon },
-  { title: 'formik icon', icon: formikIcon },
-  { title: 'reactrouter icon', icon: reactrouterIcon },
-  { title: 'react icon', icon: reactIcon },
-  { title: 'redux icon', icon: reduxIcon },
+  {
+    title: 'html',
+    link: 'https://www.w3.org/',
+    icon: htmlIcon,
+  },
+  {
+    title: 'css3',
+    link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+    icon: cssIcon,
+  },
+  {
+    title: 'sass',
+    link: 'https://sass-lang.com/',
+    icon: sassIcon,
+  },
+  {
+    title: 'javascript',
+    link: 'https://developer.mozilla.org/es/docs/Web/JavaScript',
+    icon: jsIcon,
+  },
+  {
+    title: 'typescript',
+    link: 'https://www.typescriptlang.org/',
+    icon: tsIcon,
+  },
+  { title: 'git', link: 'https://git-scm.com/', icon: gitIcon },
+  {
+    title: 'bootstrap',
+    link: 'https://getbootstrap.com/',
+    icon: bsIcon,
+  },
+  { title: 'mui', link: 'https://mui.com/', icon: muiIcon },
+  {
+    title: 'eslint',
+    link: 'https://eslint.org/',
+    icon: eslintIcon,
+  },
+  {
+    title: 'formik',
+    link: 'https://formik.org/',
+    icon: formikIcon,
+  },
+  {
+    title: 'reactrouter',
+    link: 'https://reactrouter.com/en/main',
+    icon: reactrouterIcon,
+  },
+  {
+    title: 'react',
+    link: 'https://react.dev/',
+    icon: reactIcon,
+  },
+  {
+    title: 'redux',
+    link: 'https://redux.js.org/',
+    icon: reduxIcon,
+  },
 ];
