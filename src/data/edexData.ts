@@ -15,7 +15,7 @@ export const edexData: {
         title: 'Bachelor of Mathematics',
         place: 'Universidad del Comahue',
         description:
-          'I did not end the university degree, but I adquired a lot of math knowledges.',
+          'I did not end the university degree, but I acquired a lot of math knowledge.',
         date: 'March 2018 - Nov. 2020',
       },
       {

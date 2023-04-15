@@ -34,7 +34,7 @@ const Edex = (): JSX.Element => {
           onClick={() => {
             setShowEducactionSegment(false);
           }}>
-          Experiencie
+          Experience
         </p>
       </div>
       <div className={edexSegments}>
