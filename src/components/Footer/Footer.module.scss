@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: $mb-4;
+  padding-left: $mb-1;
+  padding-right: $mb-1;
+  background-color: $dark;
+}
+
+.name {
+  text-align: left;
+  font-size: var(--h3-font-size);
+  font-weight: 400;
+}
+
+.subname {
+  text-align: left;
+  font-size: var(--normal-font-size);
+  font-weight: 200;
+}
+
+.contactme {
+  font-size: var(--h3-font-size);
+  &:hover {
+    color: $blue;
+    text-decoration: underline;
+  }
+}
+
+.portfolioRepo {
+  font-size: var(--h1-font-size);
+}
