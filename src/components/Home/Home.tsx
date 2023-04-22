@@ -1,6 +1,6 @@
 import manuPortrait from '../../assets/img/me.jpg';
 import styles from './Home.module.scss';
-import myCv from '../../assets/pdf/Manuel Facundo Fernadez.pdf';
+import englishCv from '../../assets/pdf/Manuel Facundo Fernadez - English.pdf';
 
 const Home = (): JSX.Element => {
   const {
@@ -29,7 +29,7 @@ const Home = (): JSX.Element => {
           </p>
         </div>
         <div>
-          <a download={true} href={myCv} className={homeDescButton}>
+          <a download={true} href={englishCv} className={homeDescButton}>
             <span className={cvStyle}>
               Download <span className={cvStyleCV}>CV</span>
             </span>
