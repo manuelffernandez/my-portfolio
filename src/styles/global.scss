@@ -121,6 +121,34 @@ img {
   font-weight: 900;
 }
 
+.fs-big {
+  font-size: var(--big-font-size);
+}
+
+.fs-h1 {
+  font-size: var(--h1-font-size);
+}
+
+.fs-h2 {
+  font-size: var(--h2-font-size);
+}
+
+.fs-h3 {
+  font-size: var(--h3-font-size);
+}
+
+.fs-normal {
+  font-size: var(--normal-font-size);
+}
+
+.fs-small {
+  font-size: var(--small-font-size);
+}
+
+.fs-smaller {
+  font-size: var(--smaller-font-size);
+}
+
 .color-dark {
   color: $dark;
 }
