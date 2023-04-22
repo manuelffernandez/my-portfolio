@@ -31,16 +31,16 @@ const sections: Section[] = [
     element: <Skills />,
   },
   {
-    id: 'projects',
-    title: 'Projects',
-    subtitle: 'Favorite works',
-    element: <Projects />,
-  },
-  {
     id: 'objectives',
     title: 'Objectives',
     subtitle: `Techs I will learn`,
     element: <Objectives />,
+  },
+  {
+    id: 'projects',
+    title: 'Projects',
+    subtitle: 'Favorite works',
+    element: <Projects />,
   },
 ];
 
