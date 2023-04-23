@@ -6,3 +6,5 @@ export * from './Section';
 export * from './Timeline';
 export * from './TimelineEvent';
 export * from './Footer';
+export * from './Tooltip';
+export * from './TooltipWrapper';
