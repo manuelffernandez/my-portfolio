@@ -33,12 +33,12 @@ const Home = (): JSX.Element => {
         <div className={buttons}>
           <a download={true} href={englishCv} className={homeDescButton}>
             <span className={cvStyle}>
-              <span className={cvStyleCV}>CV</span> - English
+              <span className={cvStyleCV}>CV</span> English
             </span>
           </a>
           <a download={true} href={spanishCv} className={homeDescButton}>
             <span className={cvStyle}>
-              <span className={cvStyleCV}>CV</span> - Español
+              <span className={cvStyleCV}>CV</span> Español
             </span>
           </a>
         </div>
