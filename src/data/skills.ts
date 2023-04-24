@@ -15,7 +15,7 @@ import jestIcon from '../assets/icons/jest.svg';
 import dockerIcon from '../assets/icons/docker.svg';
 import postgresIcon from '../assets/icons/postgresql.svg';
 
-interface Skill {
+export interface Skill {
   title: string;
   link: string;
   icon: string;
