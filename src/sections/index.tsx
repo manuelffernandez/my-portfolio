@@ -3,6 +3,7 @@ import { Edex } from './Edex';
 import { Skills } from './Skills';
 import { Projects } from './Projects';
 import { Objectives } from './Objectives';
+import { Certificates } from './Certificates';
 
 interface Section {
   id: string;
@@ -31,16 +32,22 @@ const sections: Section[] = [
     element: <Skills />,
   },
   {
+    id: 'objectives',
+    title: 'Objectives',
+    subtitle: `Techs I will learn`,
+    element: <Objectives />,
+  },
+  {
     id: 'projects',
     title: 'Projects',
     subtitle: 'Favorite works',
     element: <Projects />,
   },
   {
-    id: 'objectives',
-    title: 'Objectives',
-    subtitle: `Techs I will learn`,
-    element: <Objectives />,
+    id: 'certificates',
+    title: 'Certificates',
+    subtitle: 'External links',
+    element: <Certificates />,
   },
 ];
 

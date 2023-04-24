@@ -1,0 +1,41 @@
+.container {
+  &Active {
+    cursor: pointer;
+    position: relative;
+    &::before,
+    &::after {
+      position: absolute;
+      left: 50%;
+      top: -0.5rem;
+      transform: translateX(-50%) translateY(-100%);
+      @include mediumDown {
+        top: -0.2rem;
+      }
+    }
+    &::before {
+      box-sizing: border-box;
+      content: attr(data-tooltip);
+    
+      width: max-content;
+      max-width: 100%;
+      padding: 0.3rem;
+    
+      word-break: break-all;
+      text-align: center;
+      font-size: var(--smaller-font-size);
+      border-radius: 0.3rem;
+      color: $blue;
+      background: $dark;
+      @include mediumDown {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+      }
+    }
+  }
+  &:hover {
+    @extend .containerActive;
+  }
+}
+
+
+

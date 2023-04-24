@@ -1,0 +1,11 @@
+.certificateItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: $mb-1-5;
+}
+
+.certificateItemInfo {
+  text-align: start;
+  margin-right: $mb-3;
+}
