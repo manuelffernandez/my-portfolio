@@ -35,6 +35,7 @@ export const projects: Project[] = [
       'This front-end e-commerce project is built with React and utilizes context. It uses Firebase as a database to store its products. Users can browse through the selection of products, add items to their shopping cart, and make simulated purchases with an asynchronous HTTP request to the API.',
     imgUrl: jompaImg,
     repoLink: 'https://github.com/manuelffernandez/react-spa-ecomm',
+    deployLink: 'https://jompa-spacommerce.netlify.app/',
   },
   {
     title: 'Custom Blog',
