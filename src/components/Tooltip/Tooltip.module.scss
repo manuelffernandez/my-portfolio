@@ -8,6 +8,9 @@
       left: 50%;
       top: -0.5rem;
       transform: translateX(-50%) translateY(-100%);
+      @include mediumDown {
+        top: -0.2rem;
+      }
     }
     &::before {
       box-sizing: border-box;
@@ -23,6 +26,10 @@
       border-radius: 0.3rem;
       color: $blue;
       background: $dark;
+      @include mediumDown {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+      }
     }
   }
   &:hover {

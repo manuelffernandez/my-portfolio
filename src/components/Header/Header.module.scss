@@ -30,11 +30,11 @@
   width: 50%;
   @include mediumDown {
     position: fixed;
-    top: -150px;
+    top: -400px;
     right: 0;
     width: 100%;
     background-color: $dark;
-    padding: 4rem 1rem 1.5rem 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
     border-radius: 0 0 1.5rem 1.5rem;
     transition: .5s;
     &Displayed {
@@ -47,6 +47,9 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  @include mediumDown {
+    flex-direction: column;
+  }
 }
 
 .navLink {
