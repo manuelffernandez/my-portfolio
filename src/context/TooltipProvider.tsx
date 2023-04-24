@@ -16,7 +16,6 @@ const TooltipProvider = (props: Props): JSX.Element => {
 
   const handleSelect = (index: number): void => {
     if (index === selectedIndex) {
-      console.log('test');
       setSelectedIndex(null);
     } else {
       setSelectedIndex(index);
