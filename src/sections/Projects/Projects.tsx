@@ -46,6 +46,7 @@ const Projects = (): JSX.Element => {
                   href={project.repoLink}
                   target='__blank'
                   rel='noreferrer noopener'
+                  title='Github repository'
                   className={btnRepo}>
                   Repo
                 </a>
@@ -55,9 +56,13 @@ const Projects = (): JSX.Element => {
                         href: project.deployLink,
                         target: '__blank',
                         rel: 'noreferrer noopener',
+                        title: 'Deploy link',
                         className: btnDemo,
                       }
-                    : { className: btnDemoDisabled })}>
+                    : {
+                        className: btnDemoDisabled,
+                        title: 'Currently unavailable',
+                      })}>
                   Demo
                 </a>
               </div>

@@ -34,7 +34,7 @@ const Header = (): JSX.Element => {
   return (
     <header className={header}>
       <nav className={`container ${nav}`}>
-        <a href='#' className={`fw-100 ${navLogo}`}>
+        <a href='#' title='Home' className={`fw-100 ${navLogo}`}>
           M
         </a>
         <div className={`${navMenu} ${displayMenu ? navMenuDisplayed : ''}`}>
