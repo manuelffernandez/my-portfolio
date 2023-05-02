@@ -39,9 +39,9 @@ const Edex = (): JSX.Element => {
       </div>
       <div className={edexSegments}>
         {showEducactionSegment ? (
-          <Timeline events={edexData.en.studies} />
+          <Timeline events={edexData.studies} />
         ) : (
-          <Timeline events={edexData.en.jobs} />
+          <Timeline events={edexData.jobs} />
         )}
       </div>
     </div>
