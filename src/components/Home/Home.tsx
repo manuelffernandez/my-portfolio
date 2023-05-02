@@ -1,4 +1,3 @@
-import manuPortrait from '../../assets/img/me.jpg';
 import styles from './Home.module.scss';
 import englishCv from '../../assets/pdf/Manuel Facundo Fernadez - English.pdf';
 import spanishCv from '../../assets/pdf/Manuel Facundo Fernadez - Español.pdf';
@@ -45,7 +44,7 @@ const Home = (): JSX.Element => {
       </div>
       <div className={homeImgCont}>
         <img
-          src={manuPortrait}
+          src='https://res.cloudinary.com/dke7ynizq/image/upload/v1682985824/portfolio/me_y8hndj.jpg'
           alt='Self-portrait of Manuel'
           className={homeImgContImage}
         />
