@@ -39,6 +39,8 @@ I know sometimes its hard to create a simple but pretty website, even if youtube
 
 So if you like this model and want to collaborate in some way or just simple use as a template to create yours, please feel free to do it.
 
+**:smile: Just don't forget to mention :smile:**
+
 ## Installation
 
 For this project I used v18.14.2 of NodeJS. There is a *.nvmrc* file to select the correct version with **nvm**. If you don't have it, ensure that you have installed that specific node version.
@@ -49,9 +51,6 @@ To get started clone the repository and run:
 
 -  `npm i` or `npm install` to install the necessary dependencies.
 -  `npm run dev` to launch the application in your browser.
-
-**Just don't forget to mention :smile:**
-
 
 ## Contact me :arrow_down:
 #### :email: [manufer6503@gmail.com](mailto:manufer6503@gmail.com)
