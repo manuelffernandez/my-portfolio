@@ -43,9 +43,7 @@ So if you like this model and want to collaborate in some way or just simple use
 
 ## Installation
 
-For this project I used v18.14.2 of NodeJS. There is a *.nvmrc* file to select the correct version with **nvm**. If you don't have it, ensure that you have installed that specific node version.
-
-<sub>See [nvm](https://github.com/nvm-sh/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows) for more info.</sub>
+For this project I used v18.14.2 of NodeJS. Ensure that you have installed that specific node version.
 
 To get started clone the repository and run:
 
