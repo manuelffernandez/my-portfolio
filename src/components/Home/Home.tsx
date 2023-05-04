@@ -1,6 +1,4 @@
 import styles from './Home.module.scss';
-import englishCv from '../../assets/pdf/Manuel Facundo Fernadez - English.pdf';
-import spanishCv from '../../assets/pdf/Manuel Facundo Fernadez - Español.pdf';
 
 const Home = (): JSX.Element => {
   const {
@@ -30,12 +28,20 @@ const Home = (): JSX.Element => {
           </p>
         </div>
         <div className={buttons}>
-          <a download={true} href={englishCv} className={homeDescButton}>
+          <a
+            target='__blank'
+            rel='noopener noreferrer'
+            href='https://firebasestorage.googleapis.com/v0/b/portfolio-1c1e5.appspot.com/o/Manuel Facundo Fernadez - Resume.pdf?alt=media'
+            className={homeDescButton}>
             <span className={cvStyle}>
               <span className={cvStyleCV}>CV</span> English
             </span>
           </a>
-          <a download={true} href={spanishCv} className={homeDescButton}>
+          <a
+            target='__blank'
+            rel='noopener noreferrer'
+            href='https://firebasestorage.googleapis.com/v0/b/portfolio-1c1e5.appspot.com/o/Manuel%20Facundo%20Fernadez%20-%20Curr%C3%ADculum.pdf?alt=media'
+            className={homeDescButton}>
             <span className={cvStyle}>
               <span className={cvStyleCV}>CV</span> Español
             </span>
