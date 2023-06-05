@@ -1,4 +1,7 @@
+import { useEffect, useState } from 'react';
+import { fetchResume } from '../../services/fetchResume';
 import styles from './Home.module.scss';
+import { type ResumeReferences } from '../../interfaces/Resume';
 
 const Home = (): JSX.Element => {
   const {
@@ -14,6 +17,16 @@ const Home = (): JSX.Element => {
     cvStyleCV,
     buttons,
   } = styles;
+
+  const INITIAL_STATE = {en: '', es: ''}
+  const [resumes, setResumes] = useState<ResumeReferences>(INITIAL_STATE)
+
+  useEffect(() => {
+    fetchResume()
+    .then((res) => { setResumes(res) })
+    .catch((err) => { console.log(err) })
+  },[])
+
 
   return (
     <section className={`container ${homeCont}`}>
@@ -31,7 +44,7 @@ const Home = (): JSX.Element => {
           <a
             target='__blank'
             rel='noopener noreferrer'
-            href='https://firebasestorage.googleapis.com/v0/b/portfolio-1c1e5.appspot.com/o/Manuel Facundo Fernadez - Resume.pdf?alt=media'
+            href={resumes.en}
             className={homeDescButton}>
             <span className={cvStyle}>
               <span className={cvStyleCV}>CV</span> English
@@ -40,7 +53,7 @@ const Home = (): JSX.Element => {
           <a
             target='__blank'
             rel='noopener noreferrer'
-            href='https://firebasestorage.googleapis.com/v0/b/portfolio-1c1e5.appspot.com/o/Manuel%20Facundo%20Fernadez%20-%20Curr%C3%ADculum.pdf?alt=media'
+            href={resumes.es}
             className={homeDescButton}>
             <span className={cvStyle}>
               <span className={cvStyleCV}>CV</span> Español
