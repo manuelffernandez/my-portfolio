@@ -4,7 +4,7 @@ import { fetchCertificates } from '../../services/fetchCertificates';
 import styles from './Certificates.module.scss';
 
 const Certificates = (): JSX.Element => {
-  const { certificateItem, certificateItemInfo } = styles;
+  const { certificateItem, certificateItemInfo, certificateItemLinks } = styles;
 
   const [certificates, setCertificates] = useState<Certificate[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
@@ -33,7 +33,7 @@ const Certificates = (): JSX.Element => {
               );
             })
             .map((certificate, index) => {
-              const { link, title, institute } = certificate;
+              const { link, title, institute, image } = certificate;
               return (
                 <li key={index} className={certificateItem}>
                   <div className={certificateItemInfo}>
@@ -42,13 +42,24 @@ const Certificates = (): JSX.Element => {
                       <span>{institute}</span>
                     </p>
                   </div>
-                  <a
-                    href={link}
-                    target='__blank'
-                    rel='noopener noreferrer'
-                    className='fs-h3'>
-                    <i className='fa-solid fa-arrow-up-right-from-square'></i>
-                  </a>
+                  <div className={certificateItemLinks}>
+                    <a
+                      href={image}
+                      target='__blank'
+                      rel='noopener noreferrer'
+                      className='fs-h3 cursor-default'
+                      title='Certificate image'>
+                      <i className='fa-solid fa-image fs-h3 color-blue color-cyan-hover cursor-pointer'></i>
+                    </a>
+                    <a
+                      href={link}
+                      target='__blank'
+                      rel='noopener noreferrer'
+                      className='fs-h3'
+                      title='Certificate link'>
+                      <i className='fa-solid fa-arrow-up-right-from-square'></i>
+                    </a>
+                  </div>
                 </li>
               );
             })
