@@ -169,23 +169,23 @@ img {
   color: $blue;
 }
 
-.color-dark-hover {
+.color-dark-hover:hover {
   color: $dark;
 }
 
-.color-gray-hover {
+.color-gray-hover:hover {
   color: $gray;
 }
 
-.color-white-hover {
+.color-white-hover:hover {
   color: $white;
 }
 
-.color-cyan-hover {
+.color-cyan-hover:hover {
   color: $cyan;
 }
 
-.color-blue-hover {
+.color-blue-hover:hover {
   color: $blue;
 }
 
@@ -209,24 +209,32 @@ img {
   background-color: $blue;
 }
 
-.bgc-dark-hover {
+.bgc-dark-hover:hover {
   background-color: $dark;
 }
 
-.bgc-gray-hover {
+.bgc-gray-hover:hover {
   background-color: $gray;
 }
 
-.bgc-white-hover {
+.bgc-white-hover:hover {
   background-color: $white;
 }
 
-.bgc-cyan-hover {
+.bgc-cyan-hover:hover {
   background-color: $cyan;
 }
 
-.bgc-blue-hover {
+.bgc-blue-hover:hover {
   background-color: $blue;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
 }
 
 /*==================== OVERRIDE SWIPER ====================*/

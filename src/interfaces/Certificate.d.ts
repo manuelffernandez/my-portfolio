@@ -6,4 +6,5 @@ export interface Certificate {
   institute: string;
   issueDate: Timestamp;
   link: string;
+  image: string;
 }
