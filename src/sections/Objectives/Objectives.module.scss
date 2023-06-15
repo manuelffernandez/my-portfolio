@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: start;
+  flex-wrap: wrap;
   gap: 2rem;
   width: 70%;
   @include mediumDown {
