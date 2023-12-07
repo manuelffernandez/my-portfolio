@@ -17,6 +17,7 @@ const Tooltip = (props: Props): JSX.Element => {
   return (
     <div
       className={selectedDos ? containerActive : container}
+      title={text}
       onClick={() => {
         handleSelect(index);
       }}

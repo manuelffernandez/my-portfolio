@@ -14,11 +14,11 @@
     &::before {
       box-sizing: border-box;
       content: attr(data-tooltip);
-    
+
       width: max-content;
       max-width: 100%;
       padding: 0.3rem;
-    
+
       word-break: break-all;
       text-align: center;
       font-size: var(--smaller-font-size);
@@ -31,10 +31,7 @@
       }
     }
   }
-  &:hover {
-    @extend .containerActive;
-  }
+  // &:hover {
+  //   @extend .containerActive;
+  // }
 }
-
-
-
