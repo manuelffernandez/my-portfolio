@@ -5,4 +5,5 @@ export interface Skill {
   icon: string;
   learned: boolean;
   studying: boolean;
+  order: number;
 }

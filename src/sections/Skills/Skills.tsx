@@ -21,6 +21,8 @@ const Skills = (): JSX.Element => {
     void getObjs();
   }, []);
 
+  console.log(skills.sort((a, b) => b.order - a.order));
+
   return (
     <TooltipWrapper>
       <div className={skillsGrid}>
@@ -29,6 +31,7 @@ const Skills = (): JSX.Element => {
         ) : (
           skills
             .filter(skill => skill.learned)
+            .sort((a, b) => a.order - b.order)
             .map((skill, index) => (
               <Tooltip key={index} index={index} text={skill.title}>
                 <div className={iconCont}>
