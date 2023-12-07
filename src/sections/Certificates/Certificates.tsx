@@ -44,19 +44,39 @@ const Certificates = (): JSX.Element => {
                   </div>
                   <div className={certificateItemLinks}>
                     <a
-                      href={image}
-                      target='__blank'
-                      rel='noopener noreferrer'
-                      className='fs-h3 cursor-default'
-                      title='Certificate image'>
+                      // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+                      {...(image.length > 0
+                        ? {
+                            href: link,
+                            target: '__blank',
+                            className: 'fs-h3',
+                            title: 'Certificate image',
+                          }
+                        : {
+                            href: '#',
+                            className:
+                              'fs-h3 color-dark color-dark-hover cursor-default',
+                            title: 'Currently unavailable',
+                          })}
+                      rel='noopener noreferrer'>
                       <i className='fa-solid fa-image fs-h3 color-blue color-cyan-hover cursor-pointer'></i>
                     </a>
                     <a
-                      href={link}
-                      target='__blank'
-                      rel='noopener noreferrer'
-                      className='fs-h3'
-                      title='Certificate link'>
+                      // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+                      {...(link.length > 0
+                        ? {
+                            href: link,
+                            target: '__blank',
+                            className: 'fs-h3',
+                            title: 'Certificate link',
+                          }
+                        : {
+                            href: '#',
+                            className:
+                              'fs-h3 color-dark color-dark-hover cursor-default',
+                            title: 'Currently unavailable',
+                          })}
+                      rel='noopener noreferrer'>
                       <i className='fa-solid fa-arrow-up-right-from-square'></i>
                     </a>
                   </div>
