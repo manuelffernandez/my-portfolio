@@ -71,7 +71,8 @@ const Projects = (): JSX.Element => {
                       Repo
                     </a>
                     <a
-                      {...(project.deployLink !== undefined
+                      // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+                      {...(project.deployLink
                         ? {
                             href: project.deployLink,
                             target: '__blank',
