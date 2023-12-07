@@ -21,8 +21,6 @@ const Skills = (): JSX.Element => {
     void getObjs();
   }, []);
 
-  console.log(skills.sort((a, b) => b.order - a.order));
-
   return (
     <TooltipWrapper>
       <div className={skillsGrid}>

@@ -1,11 +1,35 @@
-import { useState } from 'react';
-import styles from './Edex.module.scss';
+import { useEffect, useState } from 'react';
 import { Timeline } from '../../components';
-import { edexData } from '../../data/edexData';
+import { type TimelineEventType } from '../../interfaces/timelineEvent';
+import { fetchAcademics } from '../../services/fetchAcademics';
+import { fetchJobs } from '../../services/fetchJobs';
+import styles from './Edex.module.scss';
 
 const Edex = (): JSX.Element => {
   const [showEducactionSegment, setShowEducactionSegment] =
     useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [timelineData, setTimelineData] = useState<{
+    academics: TimelineEventType[];
+    jobs: TimelineEventType[];
+  }>({ academics: [], jobs: [] });
+
+  useEffect(() => {
+    const fetchEdex = async (): Promise<void> => {
+      setIsLoading(true);
+      try {
+        const academics = await fetchAcademics();
+        const jobs = await fetchJobs();
+
+        setTimelineData({ academics, jobs });
+      } catch (error) {
+        console.log('fetch edex error', error);
+      }
+      setIsLoading(false);
+    };
+
+    void fetchEdex();
+  }, []);
 
   const {
     edexCont,
@@ -39,9 +63,15 @@ const Edex = (): JSX.Element => {
       </div>
       <div className={edexSegments}>
         {showEducactionSegment ? (
-          <Timeline events={edexData.studies} />
+          isLoading ? (
+            <p>Loading...</p>
+          ) : (
+            <Timeline events={timelineData.academics} />
+          )
+        ) : isLoading ? (
+          <p>Loading...</p>
         ) : (
-          <Timeline events={edexData.jobs} />
+          <Timeline events={timelineData.jobs} />
         )}
       </div>
     </div>

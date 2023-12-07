@@ -1,4 +1,4 @@
-import { type Network } from '../../helpers/socialNetworkLinks';
+import { type Network } from '../../lib/constants/socialNetworkLinks';
 import styles from './Contact.module.scss';
 
 interface Props {

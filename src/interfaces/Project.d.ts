@@ -5,4 +5,5 @@ export interface Project {
   imgUrl: string;
   repoLink: string;
   deployLink?: string;
+  show: boolean;
 }
