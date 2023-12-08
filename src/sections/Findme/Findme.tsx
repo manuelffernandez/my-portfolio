@@ -1,5 +1,5 @@
-import { Contact } from '../../components';
-import { socialNetworkLinks } from '../../lib/constants/socialNetworkLinks';
+import { Contact } from '@/components';
+import { socialNetworkLinks } from '@/lib/constants/socialNetworkLinks';
 import styles from './Findme.module.scss';
 
 const Findme = (): JSX.Element => {
