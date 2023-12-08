@@ -1,6 +1,6 @@
+import { type ResumeReferences } from '@/types';
 import { collection, getDocs, query } from 'firebase/firestore';
 import { db } from './firebaseConfig';
-import { type ResumeReferences } from '../interfaces/Resume';
 
 export const fetchResume = async (): Promise<ResumeReferences> => {
   const q = query(collection(db, 'resumes'));

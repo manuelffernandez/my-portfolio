@@ -1,7 +1,7 @@
+import { Tooltip, TooltipWrapper } from '@/components';
+import { fetchSkills } from '@/services/fetchSkills';
+import { type Skill } from '@/types';
 import { useEffect, useState } from 'react';
-import { Tooltip, TooltipWrapper } from '../../components';
-import { type Skill } from '../../interfaces/Skill';
-import { fetchSkills } from '../../services/fetchSkills';
 import styles from './Skills.module.scss';
 
 const Skills = (): JSX.Element => {

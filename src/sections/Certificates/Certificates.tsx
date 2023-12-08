@@ -1,6 +1,6 @@
+import { fetchCertificates } from '@/services/fetchCertificates';
+import { type Certificate } from '@/types';
 import { useEffect, useState } from 'react';
-import { type Certificate } from '../../interfaces/Certificate';
-import { fetchCertificates } from '../../services/fetchCertificates';
 import styles from './Certificates.module.scss';
 
 const Certificates = (): JSX.Element => {

@@ -1,7 +1,7 @@
+import { fetchSkills } from '@/services/fetchSkills';
+import { type Skill } from '@/types';
 import { useEffect, useState } from 'react';
-import { fetchSkills } from '../../services/fetchSkills';
 import styles from './Objectives.module.scss';
-import { type Skill } from '../../interfaces/Skill';
 
 const Objectives = (): JSX.Element => {
   const { objCont, iconCont, iconContTitle, iconContImg, iconContImgDisabled } =

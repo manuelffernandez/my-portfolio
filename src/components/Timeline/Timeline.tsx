@@ -1,6 +1,6 @@
-import { TimelineEvent } from '../';
-import { type TimelineEventType } from '../../interfaces/timelineEvent';
+import { TimelineEvent } from '@/components';
 import styles from './Timeline.module.scss';
+import { type TimelineEventType } from '@/types';
 
 interface Props {
   events: TimelineEventType[];

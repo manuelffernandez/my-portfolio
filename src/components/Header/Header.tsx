@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './Header.module.scss';
-import sections from '../../sections';
+import sections from '@/sections';
 
 const Header = (): JSX.Element => {
   const bpMedium: number = 968;
@@ -45,7 +45,7 @@ const Header = (): JSX.Element => {
                   onClick={() => {
                     setDisplayMenu(false);
                   }}
-                  href={`#${section.id}`}
+                  href={`#${section.id as string}`}
                   className={navLink}>
                   {section.title}
                 </a>

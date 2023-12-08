@@ -1,6 +1,6 @@
+import { type Skill } from '@/types';
 import { collection, getDocs, query } from 'firebase/firestore';
 import { db } from './firebaseConfig';
-import { type Skill } from '../interfaces/Skill';
 
 export const fetchSkills = async (): Promise<Skill[]> => {
   const q = query(collection(db, 'skills'));

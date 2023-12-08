@@ -1,9 +1,9 @@
+import { fetchProjects } from '@/services/fetchProjects';
+import { type Project } from '@/types';
+import { useEffect, useState } from 'react';
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './Projects.module.scss';
-import { useEffect, useState } from 'react';
-import { fetchProjects } from '../../services/fetchProjects';
-import { type Project } from '../../interfaces/Project';
 
 const Projects = (): JSX.Element => {
   const {

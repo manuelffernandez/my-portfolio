@@ -1,6 +1,5 @@
-import { useContext } from 'react';
+import { useTooltipContext } from '@/context/TooltipProvider';
 import styles from './Tooltip.module.scss';
-import TooltipContext from '../../context/TooltipContext';
 
 interface Props {
   text: string;
@@ -11,7 +10,7 @@ interface Props {
 const Tooltip = (props: Props): JSX.Element => {
   const { text, children, index } = props;
   const { container, containerActive } = styles;
-  const { handleSelect, selectedIndex } = useContext(TooltipContext);
+  const { handleSelect, selectedIndex } = useTooltipContext();
   const selectedDos = selectedIndex === index;
 
   return (

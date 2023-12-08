@@ -1,7 +1,7 @@
+import { type ResumeReferences } from '@/types';
+import { fetchResume } from '@/services/fetchResume';
 import { useEffect, useState } from 'react';
-import { fetchResume } from '../../services/fetchResume';
 import styles from './Home.module.scss';
-import { type ResumeReferences } from '../../interfaces/Resume';
 
 const Home = (): JSX.Element => {
   const {
@@ -18,15 +18,18 @@ const Home = (): JSX.Element => {
     buttons,
   } = styles;
 
-  const INITIAL_STATE = {en: '', es: ''}
-  const [resumes, setResumes] = useState<ResumeReferences>(INITIAL_STATE)
+  const INITIAL_STATE = { en: '', es: '' };
+  const [resumes, setResumes] = useState<ResumeReferences>(INITIAL_STATE);
 
   useEffect(() => {
     fetchResume()
-    .then((res) => { setResumes(res) })
-    .catch((err) => { console.log(err) })
-  },[])
-
+      .then(res => {
+        setResumes(res);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <section className={`container ${homeCont}`}>

@@ -1,5 +1,5 @@
+import { type TimelineEventType } from '@/types';
 import format from 'date-fns/format';
-import { type TimelineEventType } from '../../interfaces/timelineEvent';
 import styles from './TimelineEvent.module.scss';
 
 interface Props {

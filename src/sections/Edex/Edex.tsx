@@ -1,8 +1,8 @@
+import { Timeline } from '@/components';
+import { fetchAcademics } from '@/services/fetchAcademics';
+import { fetchJobs } from '@/services/fetchJobs';
+import { type TimelineEventType } from '@/types';
 import { useEffect, useState } from 'react';
-import { Timeline } from '../../components';
-import { type TimelineEventType } from '../../interfaces/timelineEvent';
-import { fetchAcademics } from '../../services/fetchAcademics';
-import { fetchJobs } from '../../services/fetchJobs';
 import styles from './Edex.module.scss';
 
 const Edex = (): JSX.Element => {
