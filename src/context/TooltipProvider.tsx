@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import TooltipContext from './TooltipContext';
+import { useState, createContext, useContext } from 'react';
 
 interface Props {
   children: JSX.Element | JSX.Element[];
@@ -9,6 +8,9 @@ export interface TooltipValue {
   handleSelect: (i: number) => void;
   selectedIndex: number | null;
 }
+
+// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+const TooltipContext = createContext<TooltipValue>({} as TooltipValue);
 
 const TooltipProvider = (props: Props): JSX.Element => {
   const { children } = props;
@@ -30,3 +32,7 @@ const TooltipProvider = (props: Props): JSX.Element => {
 };
 
 export default TooltipProvider;
+
+export const useTooltipContext = (): TooltipValue => {
+  return useContext(TooltipContext);
+};

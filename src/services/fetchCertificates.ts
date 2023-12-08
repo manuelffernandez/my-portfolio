@@ -1,5 +1,5 @@
+import { type Certificate } from '@/types';
 import { collection, getDocs, query } from 'firebase/firestore';
-import { type Certificate } from '../interfaces/Certificate';
 import { db } from './firebaseConfig';
 
 export const fetchCertificates = async (): Promise<Certificate[]> => {
