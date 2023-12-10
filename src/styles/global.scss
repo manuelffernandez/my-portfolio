@@ -243,6 +243,9 @@ img {
 .swiper-button-prev,
 .swiper-button-next {
   color: $blue;
+  &:hover {
+    color: $cyan;
+  }
   &::after {
     font-size: var(--h1-font-size);
   }
