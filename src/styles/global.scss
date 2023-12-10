@@ -22,16 +22,16 @@
   --h2-font-size: 1.5rem;
   --h3-font-size: 1.25rem;
   --normal-font-size: 1rem;
-  --small-font-size: .875rem;
-  --smaller-font-size: .813rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
   @include mediumDown {
     --big-font-size: 2rem;
     --h1-font-size: 1.75rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1.125rem;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
   }
 }
 
@@ -53,7 +53,9 @@ body {
   width: 100%;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: $cyan;
   font-weight: 600;
 }
@@ -238,8 +240,12 @@ img {
 }
 
 /*==================== OVERRIDE SWIPER ====================*/
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   color: $blue;
+  &:hover {
+    color: $cyan;
+  }
   &::after {
     font-size: var(--h1-font-size);
   }
@@ -256,7 +262,7 @@ img {
 
 /*==================== LAYOUT ====================*/
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin-left: $mb-1;
   margin-right: $mb-1;
   padding-left: $mb-2-5;

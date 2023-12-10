@@ -11,7 +11,7 @@
   padding-left: 3rem;
   padding-right: 3rem;
   padding-bottom: 3rem;
-  height: 20rem;
+  height: 25rem;
   @include mediumDown {
     flex-direction: column;
     height: 40rem;
@@ -60,7 +60,7 @@
 
 .btn {
   flex: 1;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 5px;
   font-size: var(--h3-font-size);
   font-weight: 400;

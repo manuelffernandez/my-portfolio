@@ -1,6 +1,6 @@
+import { fetchCertificates } from '@/services/fetchCertificates';
+import { type Certificate } from '@/types';
 import { useEffect, useState } from 'react';
-import { type Certificate } from '../../interfaces/Certificate';
-import { fetchCertificates } from '../../services/fetchCertificates';
 import styles from './Certificates.module.scss';
 
 const Certificates = (): JSX.Element => {
@@ -33,30 +33,56 @@ const Certificates = (): JSX.Element => {
               );
             })
             .map((certificate, index) => {
-              const { link, title, institute, image } = certificate;
+              const { link, title, institute, image, instituteLink } =
+                certificate;
               return (
                 <li key={index} className={certificateItem}>
                   <div className={certificateItemInfo}>
                     <p>{title}</p>
-                    <p className='fw-200 fs-smaller'>
+                    <a
+                      href={instituteLink}
+                      title='issuer site'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='fw-200 fs-smaller cursor-pointer color-white color-blue-hover'>
                       <span>{institute}</span>
-                    </p>
+                    </a>
                   </div>
                   <div className={certificateItemLinks}>
                     <a
-                      href={image}
-                      target='__blank'
-                      rel='noopener noreferrer'
-                      className='fs-h3 cursor-default'
-                      title='Certificate image'>
+                      // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+                      {...(image.length > 0
+                        ? {
+                            href: image,
+                            target: '__blank',
+                            className: 'fs-h3',
+                            title: 'Certificate image',
+                            rel: 'noopener noreferrer',
+                          }
+                        : {
+                            href: '#',
+                            className:
+                              'fs-h3 color-dark color-dark-hover cursor-default',
+                            title: 'Unavailable',
+                          })}>
                       <i className='fa-solid fa-image fs-h3 color-blue color-cyan-hover cursor-pointer'></i>
                     </a>
                     <a
-                      href={link}
-                      target='__blank'
-                      rel='noopener noreferrer'
-                      className='fs-h3'
-                      title='Certificate link'>
+                      // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+                      {...(link.length > 0
+                        ? {
+                            href: link,
+                            target: '__blank',
+                            className: 'fs-h3',
+                            title: 'Certificate link',
+                          }
+                        : {
+                            href: '#',
+                            className:
+                              'fs-h3 color-dark color-dark-hover cursor-default',
+                            title: 'Unavailable',
+                          })}
+                      rel='noopener noreferrer'>
                       <i className='fa-solid fa-arrow-up-right-from-square'></i>
                     </a>
                   </div>

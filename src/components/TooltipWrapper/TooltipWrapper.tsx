@@ -1,4 +1,4 @@
-import TooltipProvider from '../../context/TooltipProvider';
+import TooltipProvider from '@/context/TooltipProvider';
 
 interface Props {
   children: JSX.Element | JSX.Element[];

@@ -1,4 +1,5 @@
-import { type TimelineEventType } from '../../interfaces/timelineEvent';
+import { type TimelineEventType } from '@/types';
+import format from 'date-fns/format';
 import styles from './TimelineEvent.module.scss';
 
 interface Props {
@@ -17,11 +18,21 @@ const Event = (props: Props): JSX.Element => {
     circle,
   } = styles;
 
+  const initDate = format(new Date(event.initDate.seconds * 1000), 'MMM yyyy');
+  const endDate =
+    event.endDate !== undefined
+      ? format(new Date(event.endDate.seconds * 1000), 'MMM yyyy')
+      : undefined;
+
   return (
     <div className={item}>
       <div className={content}>
         <span className={contentTitle}>{event.title}</span>
-        <time className={contentDate}>{event.date}</time>
+        <time className={contentDate}>
+          <span>{initDate}</span>
+          <span>{' - '}</span>
+          <span>{endDate ?? 'Present'}</span>
+        </time>
         <span className={contentPlace}>{event.place}</span>
         {event.description !== undefined ? (
           <p className={contentDesc}>{event.description}</p>
