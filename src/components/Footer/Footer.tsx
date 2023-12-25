@@ -1,7 +1,7 @@
 import styles from './Footer.module.scss';
 
 const Footer = (): JSX.Element => {
-  const { footer, name, subname, contactme, portfolioRepo } = styles;
+  const { footer, name, subname, portfolioRepo } = styles;
 
   return (
     <footer className={footer}>
@@ -9,9 +9,6 @@ const Footer = (): JSX.Element => {
         <p className={name}>Manuel Fernandez</p>
         <p className={subname}>Front-End developer</p>
       </div>
-      <a href='#findme' title='Find me' className={contactme}>
-        Contact me
-      </a>
       <a
         href='https://github.com/manuelffernandez/my-portfolio'
         rel='noopener noreferrer'

@@ -1,7 +1,8 @@
-import { type ResumeReferences } from '@/types';
+import { type Info, type ResumeReferences } from '@/types';
 import { fetchResume } from '@/services/fetchResume';
 import { useEffect, useState } from 'react';
 import styles from './Home.module.scss';
+import { fetchInfo } from '@/services/fetchInfo';
 
 const Home = (): JSX.Element => {
   const {
@@ -18,13 +19,27 @@ const Home = (): JSX.Element => {
     buttons,
   } = styles;
 
-  const INITIAL_STATE = { en: '', es: '' };
-  const [resumes, setResumes] = useState<ResumeReferences>(INITIAL_STATE);
+  const INITIAL_STATES = {
+    resumes: { en: '', es: '' },
+    info: { subtitle: 'Front-end developer', description: 'Loading...' },
+  };
+  const [resumes, setResumes] = useState<ResumeReferences>(
+    INITIAL_STATES.resumes
+  );
+  const [info, setInfo] = useState<Info>(INITIAL_STATES.info);
 
   useEffect(() => {
     fetchResume()
       .then(res => {
         setResumes(res);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+
+    fetchInfo()
+      .then(res => {
+        setInfo(res);
       })
       .catch(err => {
         console.log(err);
@@ -36,12 +51,8 @@ const Home = (): JSX.Element => {
       <div className={homeDesc}>
         <div>
           <h1 className={homeDescTitle}>Manuel Fernandez</h1>
-          <h2 className={homeDescSubtitle}>Front-End developer</h2>
-          <p className={`fw-200 ${homeDescText}`}>
-            Im currently seeking my first job in IT. Over the past year I have
-            been dedicated to mastering web development with React as my primary
-            library.
-          </p>
+          <h2 className={homeDescSubtitle}>{info.subtitle}</h2>
+          <p className={`fw-200 ${homeDescText}`}>{info.description}</p>
         </div>
         <div className={buttons}>
           <a

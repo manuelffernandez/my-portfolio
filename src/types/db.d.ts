@@ -52,3 +52,8 @@ export interface Academic {
   endDate?: Timestamp;
   description?: string;
 }
+
+export interface Info {
+  subtitle: string;
+  description: string;
+}
