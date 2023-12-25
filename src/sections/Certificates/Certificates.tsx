@@ -4,8 +4,14 @@ import { useEffect, useState } from 'react';
 import styles from './Certificates.module.scss';
 
 const Certificates = (): JSX.Element => {
-  const { certificateItem, certificateItemInfo, certificateItemLinks } = styles;
-
+  const {
+    certificateItem,
+    certificateItemInfo,
+    certificateItemLinks,
+    seeMore,
+  } = styles;
+  const offset = 3;
+  const [limit, setLimit] = useState<number>(5);
   const [certificates, setCertificates] = useState<Certificate[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -32,6 +38,7 @@ const Certificates = (): JSX.Element => {
                 certifcateB.issueDate.seconds - certifcateA.issueDate.seconds
               );
             })
+            .slice(0, limit)
             .map((certificate, index) => {
               const { link, title, institute, image, instituteLink } =
                 certificate;
@@ -41,7 +48,7 @@ const Certificates = (): JSX.Element => {
                     <p>{title}</p>
                     <a
                       href={instituteLink}
-                      title='issuer site'
+                      title='institute'
                       target='_blank'
                       rel='noopener noreferrer'
                       className='fw-200 fs-smaller cursor-pointer color-white color-blue-hover'>
@@ -74,7 +81,7 @@ const Certificates = (): JSX.Element => {
                             href: link,
                             target: '__blank',
                             className: 'fs-h3',
-                            title: 'Certificate link',
+                            title: 'Certificate url',
                           }
                         : {
                             href: '#',
@@ -91,6 +98,18 @@ const Certificates = (): JSX.Element => {
             })
         )}
       </ul>
+      {limit < certificates.length ? (
+        <button
+          className={seeMore}
+          onClick={() => {
+            setLimit(prev => {
+              if (certificates.length - limit > offset) return prev + offset;
+              return prev + certificates.length - limit;
+            });
+          }}>
+          See more
+        </button>
+      ) : null}
     </div>
   );
 };
